@@ -12,6 +12,8 @@ services:
     command: npm run --prefix plugins start
 
   client:
+    labels:
+      shipyard.route: '/'
     build:
       context: ./
       dockerfile: ./docker/client.Dockerfile.dev
